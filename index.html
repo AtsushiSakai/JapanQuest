@@ -57,6 +57,7 @@ TODO
 
       document.getElementById("migration").innerHTML=text;
       document.getElementById("jsonform").innerHTML=localStorage.getItem("DB");
+      document.getElementById("migrationfooter").innerHTML="";
     }
   }
 
@@ -208,7 +209,7 @@ var timeDB=[];
 
 function SetLocalStrage(){
   var json=document.getElementById("jsondata").value;
-  //console.log(json);
+  console.log(json);
   localStorage.setItem("DB", json);
   drawScore();
   drawTable();
