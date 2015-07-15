@@ -211,6 +211,14 @@ function SetLocalStrage(){
   var json=document.getElementById("jsondata").value;
   console.log(json);
   localStorage.setItem("DB", json);
+
+  var DB = JSON.parse(localStorage.getItem("DB"));
+  console.log(localStorage.getItem("DB"));
+  if(DB!=null){
+    kenDB=DB.kenDB;
+    timeDB=DB.timeDB;
+  }
+
   drawScore();
   drawTable();
 }
